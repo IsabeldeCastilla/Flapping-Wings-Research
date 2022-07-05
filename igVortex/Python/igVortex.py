@@ -21,11 +21,11 @@ import logging
 import math
 import numpy as np
 import jax.numpy as jnp
-import seaborn as sns
-sns.set_theme()
+# import seaborn as sns
+# sns.set_theme()
 import matplotlib.pyplot as plt
 
-plt.ioff() # Turn off interactive mode. (There's no point in using it.)
+plt.ioff()  # Turn off interactive mode. (There's no point in using it.)
 
 # Load jax for the first time before starting logging.
 # Any warnings printed out will not be shown in the log.
