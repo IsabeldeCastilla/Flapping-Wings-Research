@@ -30,6 +30,7 @@ function [  ] = igVortex( )
 % istep=3:
 %   ......
 %==========================================================================
+
 %GLOBAL VARIABLES
 global tau mplot vplot fid eps folder wplot zavoid mpath delta ibios
 global impulseLb impulseAb impulseLw impulseAw LDOT HDOT ZETA
@@ -50,6 +51,9 @@ global svCont wvCont  ivCont vpFreq
     zavoid = 0; 
 %Velocity field plot: 0 (no), 1 (yes)
     vfplot=1;
+
+    % Disable Showing the Plots.
+    set(groot, 'defaultFigureVisible', 'off');
 %END DEBUGGING PARAMETERS==================================================
 
 %Open an Output File:    
@@ -356,5 +360,8 @@ fprintf(fid,'nstep = %4d dt = %6.3f\n',nstep,dt);
    
 %close opened files
     fclose('all');
+
 end
+
+
 
